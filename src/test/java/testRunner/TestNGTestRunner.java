@@ -13,14 +13,35 @@ import io.cucumber.testng.CucumberOptions;
 				"rerun:target/failed_scenarios.txt"})
 
 public class TestNGTestRunner extends AbstractTestNGCucumberTests {
-
-	// For Parallel Test Execution.
+	
 	@Override
 	@DataProvider(parallel = true)
 	public Object[][] scenarios() {
 		return super.scenarios();
 	}
 }
+
+/*
+tags = "@Smoke or @Regression"
+tags = "@Smoke and @Regression"
+tags = "@Smoke or not @Regression"
+tags = "@Smoke and not @Regression"
+*/
+
+/* 
+--> For Parallel Test Execution.
+--> It Facilitate parallel execution at 'scenario' level.
+--> The super class scenarios() returns a 2-D array of all the scenarios.
+--> TestNG then executes all the scenarios in a separate thread(if parallel = true).
+--> The scenarios and rows of the scenario outlines(Examples:) are executed in different threads.
+*/
+
+/*
+* The default thread count of the dataprovider in parallel mode is 10. To
+* change this the dataproviderthreadcount property needs to be added to the
+* configuration section of the Surefire or Failsafe plugin in the POM
+*/
+
 
 // TERMINAL EXECUTION
 

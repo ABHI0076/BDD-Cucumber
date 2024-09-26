@@ -22,6 +22,7 @@ public class Login_StepDef {
 	public void user_navigate_to_the(String url) {
 		loginPage = testContextSetup.pageObjectManager.getLoginPage();
 		testContextSetup.basePage.launchURL(url);
+		System.out.println("Thread ID : "+Thread.currentThread().getId());
 	}
 
 	@Given("User navigate to the URL using prop file")
@@ -30,6 +31,7 @@ public class Login_StepDef {
 		String url = testContextSetup.baseTest.getPropertiesInstance().getProperty("QAUrl");
 		System.out.println("URL form prop file is: "+url);
 		testContextSetup.basePage.launchURL(url);
+		System.out.println("Thread ID : "+Thread.currentThread().getId());
 	}
 
 	@When("User submit the {string} and {string}")
