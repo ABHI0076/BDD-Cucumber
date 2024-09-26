@@ -14,6 +14,8 @@ public class Login_Page extends BasePage{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+
+	
 	PageObjectManager pageObjectManager;
 
 	@FindBy(id = "user-name")

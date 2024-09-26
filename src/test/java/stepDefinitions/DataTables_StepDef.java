@@ -27,6 +27,7 @@ public class DataTables_StepDef{
 	public void user_navigate_to_the_url(DataTable dataTable) {
 		loginPage = testContextSetup.pageObjectManager.getLoginPage();
 		loginPage.launchURL(dataTable.asList().get(0));
+		System.out.println("Thread ID : "+Thread.currentThread().getId());
 	}
 
 	@When("User sign in to the application")

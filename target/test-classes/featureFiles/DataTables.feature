@@ -4,6 +4,7 @@ Feature: Verify login functionality using Datatables
   Scenario: Verify Login Page with valid credentials
     Given User navigate to the URL
     | https://www.saucedemo.com |
+    | https://www.saucedemo2.com |
     When User sign in to the application
     | standard_user | secret_sauce |  
     Then User should login successfully
