@@ -18,5 +18,5 @@ public class RunnerJunitTest {
  * plugins. In JUnit the feature files are run in parallel rather than
  * scenarios, which means all the scenarios in a feature file will be executed
  * by the same thread. You can use either Maven Surefire or Failsafe plugin to
- * execute the runners.
+ * execute the runners.(Execute from pom.xml)
  */
